@@ -29,6 +29,6 @@ describe('AppComponent', () => {
     expect(compiled.querySelector('.content span')?.textContent).toContain('angular-app app is running!');
   });
   it('add', () => {
-    expect(2+3).toBe(4);
+    expect(2+3).toBe(3);
   });
 });
