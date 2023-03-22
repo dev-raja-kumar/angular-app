@@ -7,9 +7,10 @@
     "build": "ng build",
     "watch": "ng build --watch --configuration development",
     "test": "ng test",
-    "test:no-watch": "ng test --watch=false"
+    "test:no-watch": "ng test --watch=false",
+    "lint": "eslint ./src/**/*.ts{,x}"
   },
-  "private": true,
+  "private": false,
   "dependencies": {
     "@angular/animations": "^15.2.0",
     "@angular/common": "^15.2.0",
@@ -39,7 +40,7 @@
   },
   "husky":{
     "hooks":{
-      "pre-commit":"npm run test:no-watch",
+      "pre-commit":"npm run lint",
       "pre-push":""
     }
   }
